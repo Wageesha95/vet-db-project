@@ -3,10 +3,17 @@ from django.shortcuts import render
 
 from .models import Farm, Division
 
-
 # Create your views here.
+
+
 def home(request):
-    return render(request, "home.html")
+    if request.GET.get('q'):
+        query = request.GET.get('q')
+        context = {"farms": Farm.objects.filter(farm_name__icontains=query)}
+        return render(request, "home.html", context)
+    else:
+        context = {"farms": None}
+        return render(request, "home.html", context)
 
 
 def farms(request):
