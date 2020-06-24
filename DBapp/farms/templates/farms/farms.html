@@ -1,0 +1,19 @@
+{% extends 'base-templates/base.html' %}
+
+{% block title  %}
+Farms
+{% endblock  %}
+    Farms
+{% block body  %}
+
+    <H2>Farms</H2>
+    <ol>
+        {% for farm in farms %}
+        <li>
+            <a href ='{% url 'farm' farm.id %}'>{{farm.farm_name}}</a>
+        </li>
+        {% endfor %}
+    </ol>
+    <a href ='{%url 'home'%}'>Back to Home</a>
+
+{% endblock  %}

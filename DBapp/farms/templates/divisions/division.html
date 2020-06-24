@@ -1,0 +1,17 @@
+{% extends 'base-templates/base.html' %}
+
+{% block title  %}
+    Divisions
+{% endblock %}
+
+{% block body %}
+    <H2>Division {{division.id}}</H2>
+    <ul>
+        <li>Division Name : {{division.division_name}}</li>
+        <li>Division Code : {{division.division_code}} </li>
+        
+    </ul>
+    <a href ='{%url 'divisions'%}'>Back to All Divisions</a>
+    <br>
+    <a href ='{% url 'home'%}'>Back to Home</a>
+{% endblock  %}

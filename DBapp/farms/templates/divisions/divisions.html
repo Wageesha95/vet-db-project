@@ -1,0 +1,20 @@
+{% extends 'base-templates/base.html' %}
+
+{% block title  %}
+    Divisions
+{% endblock %}
+
+{% block body %}
+
+    <H2>Divisions</H2>
+    <ol>
+        {% for division in divisions %}
+        <li>
+            <a href ='{% url 'division' division.id %}'>{{division}}</a>
+        </li>
+        {% endfor %}
+    </ol>
+
+    <a href ='{% url 'home'%}'>Back to Home</a>
+    
+{% endblock%}

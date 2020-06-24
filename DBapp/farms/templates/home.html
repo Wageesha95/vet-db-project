@@ -1,0 +1,16 @@
+{% extends 'base-templates/base.html' %}
+
+{% block title  %}
+    Home
+{% endblock %}
+
+{% block body %}
+
+    <H2>Welcome to Farms DB {{division.id}}</H2>
+    <br>
+    <br>
+    <ul>
+    <li><a href ='{%url 'farms'%}'>All farms</a></li>
+    <li><a href ='{%url 'divisions'%}'>All divisions</a></li>
+    </ul>
+{% endblock body %}

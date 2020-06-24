@@ -1,0 +1,20 @@
+{% extends 'base-templates/base.html' %}
+
+{% block title  %}
+    Farms
+{% endblock %}
+
+{% block body  %}
+
+    <H2>Farm {{farm.id}}</H2>
+    <ul>
+        <li>Farm Name : {{farm.farm_name}}</li>
+        <li>Division : {{farm.division.division_name}} ({{farm.division.division_code}}) </li>
+        
+    </ul>
+
+    <a href ='{%url 'farms'%}'>Back to All Farms</a>
+    <br>
+    <a href ='{% url 'home'%}'>Back to Home</a>
+
+{% endblock %}
